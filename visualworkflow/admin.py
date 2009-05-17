@@ -7,7 +7,7 @@
 from trac.admin import IAdminPanelProvider
 from trac.core import *
 from trac.ticket.default_workflow import get_workflow_config
-from trac.web.chrome import ITemplateProvider, add_script
+from trac.web.chrome import ITemplateProvider, add_script, add_stylesheet
 
 __all__ = ['WorkflowAdminPanel']
 
@@ -26,6 +26,8 @@ class WorkflowAdminPanel(Component):
     def render_admin_panel(self, req, cat, page, info):
         req.perm.require('TICKET_ADMIN')
         add_script(req, 'visualworkflow/js/graph_options.js')
+        add_script(req, 'visualworkflow/js/editor_tab_fondler.js')
+        add_stylesheet(req, 'visualworkflow/css/editor_tabs.css')
 
         actions = get_workflow_config(self.config)
         self.log.debug("Workflow from config: %s" % str(actions))

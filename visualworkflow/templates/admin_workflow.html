@@ -11,18 +11,33 @@
 
   <body>
     <h2>Manage Workflow</h2>
-    <form class="addnew" method="post" action="">
-      <fieldset>
-        <legend>Graph Options:</legend>
-        <div class="field">
-          <label><input type="checkbox" name="ops" id="ops" class="graph_option" value="show_ops" /> Show operations</label>
-        </div>
-        <div class="field">
-          <label><input type="checkbox" name="perms" id="perms" class="graph_option" value="show_perms" /> Show permissions</label>
-        </div>
-      </fieldset>
-    </form>
-    <img id="graph" src="${href('render-graph')}" alt="Workflow Graph" />
+    <ul id="editor_tabs">
+      <li id="tab_source" class="">
+        <a href="javascript:window.fondleTabs($('#tab_source a'))">Source Editor</a>
+      </li>
+      <li id="tab_graph" class="active">
+        Graph Editor
+      </li>
+    </ul>
+    <div id="editor_tabcontent">
+      <div id="content_source" class="inactive">
+        TODO
+      </div>
+      <div id="content_graph" class="active">
+        <form class="addnew" method="post" action="">
+          <fieldset>
+            <legend>Display Options:</legend>
+            <div class="field">
+              <label><input type="checkbox" name="ops" id="ops" class="graph_option" value="show_ops" /> Show operations</label>
+            </div>
+            <div class="field">
+              <label><input type="checkbox" name="perms" id="perms" class="graph_option" value="show_perms" /> Show permissions</label>
+            </div>
+          </fieldset>
+        </form>
+        <img id="graph" src="${href('render-graph')}" alt="Workflow Graph" />
+      </div>
+    </div>
   </body>
 
 </html>

@@ -1,0 +1,24 @@
+#editor_tabs { list-style: none; margin: 0 1em 0; padding: 1px; }
+
+#editor_tabs :link, #editor_tabs :visited {
+  border: none; color: #999;
+}
+
+#editor_tabs :link:hover, #editor_tabs :visited:hover {
+  background: transparent; color: #333;
+}
+
+#editor_tabs li { font-size: 90%; background: #e6e6e6; border: 1px solid;
+  border-color: #ccc #666 #ccc #ccc; color: #666; position: relative;
+  bottom: -1px; float: right; margin: 0 .5em; padding: .2em 1em .3em;
+}
+
+#editor_tabs li.active { background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#editor_tabcontent div.inactive { display: none; }
+
+#editor_tabcontent div.active { background: url(../../common/vgradient.png) 0 1px repeat-x;
+  border-top: 1px solid #ccc; clear: right; padding: 30px 5px; display: block;
+}
