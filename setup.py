@@ -12,7 +12,7 @@ setup(
     version='0.0.1',
     author='Mat Booth',
     author_email='mat@matbooth.co.uk',
-    url='http://www.matbooth.co.uk/trac/wiki/VisualWorkflowStart',
+    url='https://github.com/mbooth101/trac-visualworkflow',
     license='BSD',
     description='Visual Trac workflow editor',
     long_description='Adds a visual workflow editor to the admin module.',
